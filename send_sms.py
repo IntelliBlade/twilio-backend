@@ -20,11 +20,11 @@ try:
     ai_message = response.choices[0].message.content
 except AuthenticationError:
     print("Error: Invalid OpenAI API key. Check your OPENAI_API_KEY in .env")
-    sys.exit(1)
+    #sys.exit(1)
 except APIConnectionError:
     print("Error: Could not connect to OpenAI. The service may be down.")
-    sys.exit(1)
-
+    #sys.exit(1)
+ai_message = "This is a test message from Twilio" ##REMOVE THIS LINE TO USE OPENAI and uncomment the lines quitting if openai fails.
 print("OpenAI response:", ai_message)
 
 # Twilio setup
